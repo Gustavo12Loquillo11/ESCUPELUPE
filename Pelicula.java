@@ -90,14 +90,13 @@ public class Pelicula {
     // Método para representar la película como String
     @Override
     public String toString() {
-        return "Pelicula{" +
-                "id='" + id + '\'' +
-                ", titulo='" + titulo + '\'' +
+        return "Pelicula:" +
+                " titulo='" + titulo + '\'' +
+                ", id='" + id + '\'' +
                 ", autor='" + autor + '\'' +
                 ", año=" + year +
                 ", género='" + genero + '\'' +
                 ", duración=" + duracion + " min" +
-                ", stock=" + stock +
-                '}';
+                ", stock=" + stock;
     }
 }

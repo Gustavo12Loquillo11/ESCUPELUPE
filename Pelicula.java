@@ -74,7 +74,13 @@ public class Pelicula {
             throw new IllegalArgumentException("La duración debe ser mayor a 0.");
         }
     }
-
+    public void reducirStock(){
+        if(stock > 0){
+            stock--;
+        } else {
+            throw new IllegalArgumentException("No hay stock disponible.");
+        }
+    }
     public int getStock() {
         return stock;
     }

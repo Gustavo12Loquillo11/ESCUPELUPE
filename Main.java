@@ -8,6 +8,10 @@ public class Main {
         List<Pelicula> peliculas = new ArrayList<>();
         ArrayList<String> generos = new ArrayList<>();
         peliculas.add(new Pelicula("1", "El señor de los anillos", "Peter Jackson", 2001, "Fantasia", 178, 10));
+        peliculas.add(new Pelicula("2", "El mago de Oz", "El pirata de culiacan", 2002, "Ciencia Ficcion", 208, 10));
+        peliculas.add(new Pelicula("3", "La Momia", "Tony Montana", 1998, "Misterio", 120, 10));
+        peliculas.add(new Pelicula("4", "El pianista", "Johnny Escupelupe Johnson", 2001, "Aventura", 134, 10));
+        peliculas.add(new Pelicula("5", "El brutalista", "Brady Corbet", 2025, "History", 215, 10));
         generos.add(peliculas.get(0).getGenero());
         Scanner scanner = new Scanner(System.in);
         System.out.println("Bienvenido a Lupeliculas");
@@ -194,7 +198,14 @@ public class Main {
                             break;
 
                         case 3:
-                            System.out.println("Eliminar pelicula.");
+                            System.out.println(peliculas);
+                            System.out.println("Ingrese el ID de la película que desea eliminar:");
+                            String id = scanner.nextLine();
+                            for (Pelicula pelicula : peliculas){
+                                if (pelicula.getId().equals(id)){
+                                    peliculas.remove(pelicula);
+                                }
+                            }
                             break;
                         case 4:
                             System.out.println("Hasta pronto "+usuario+".");

@@ -103,8 +103,96 @@ public class Main {
                             }
                             break;
                         case 2:
-                            System.out.println("Modificar pelicula.");
+                            System.out.println("¿Qué desea modificar?");
+                            System.out.println("1.- ID");
+                            System.out.println("2.- Título");
+                            System.out.println("3.- Autor");
+                            System.out.println("4.- Año");
+                            System.out.println("5.- Género");
+                            System.out.println("6.- Duración");
+                            System.out.println("7.- Stock");
+                            int mod = Integer.parseInt(scanner.nextLine());
+                            switch(mod){
+                                case 1:
+                                    System.out.println("Ingrese el ID de la película que desea modificar:");
+                                    String id = scanner.nextLine();
+                                    for (Pelicula pelicula : peliculas) {
+                                        if (pelicula.getId().equals(id)) {
+                                            System.out.println("Ingrese el nuevo ID:");
+                                            String newId = scanner.nextLine();
+                                            pelicula.setId(newId);
+                                        }
+                                    }
+                                    break;
+                                case 2:
+                                    System.out.println("Ingrese el ID de la película que desea modificar:");
+                                    String id2 = scanner.nextLine();
+                                    for (Pelicula pelicula : peliculas) {
+                                        if (pelicula.getId().equals(id2)) {
+                                            System.out.println("Ingrese el nuevo título:");
+                                            String newTitulo = scanner.nextLine();
+                                            pelicula.setTitulo(newTitulo);
+                                        }
+                                    }
+                                    break;
+                                case 3:
+                                    System.out.println("Ingrese el ID de la película que desea modificar:");
+                                    String id3 = scanner.nextLine();
+                                    for (Pelicula pelicula : peliculas) {
+                                        if (pelicula.getId().equals(id3)) {
+                                            System.out.println("Ingrese el nuevo autor:");
+                                            String newAutor = scanner.nextLine();
+                                            pelicula.setAutor(newAutor);
+                                        }
+                                    }
+                                    break;
+                                case 4:
+                                    System.out.println("Ingrese el ID de la película que desea modificar:");
+                                    String id4 = scanner.nextLine();
+                                    for (Pelicula pelicula : peliculas) {
+                                        if (pelicula.getId().equals(id4)) {
+                                            System.out.println("Ingrese el nuevo año:");
+                                            int newYear = Integer.parseInt(scanner.nextLine());
+                                            pelicula.setYear(newYear);
+                                        }
+                                    }
+                                    break;
+                                case 5:
+                                    System.out.println("Ingrese el ID de la película que desea modificar:");
+                                    String id5 = scanner.nextLine();
+                                    for (Pelicula pelicula : peliculas) {
+                                        if (pelicula.getId().equals(id5)) {
+                                            System.out.println("Ingrese el nuevo género:");
+                                            String newGenero = scanner.nextLine();
+                                            pelicula.setGenero(newGenero);
+                                        }
+                                    }
+                                    break;
+                                case 6:
+                                    System.out.println("Ingrese el ID de la película que desea modificar:");
+                                    String id6 = scanner.nextLine();
+                                    for (Pelicula pelicula : peliculas) {
+                                        if (pelicula.getId().equals(id6)) {
+                                            System.out.println("Ingrese la nueva duración:");
+                                            int newDuracion = Integer.parseInt(scanner.nextLine());
+                                            pelicula.setDuracion(newDuracion);
+                                        }
+                                    }
+                                    break;
+                                case 7:
+                                    System.out.println("Ingrese el ID de la película que desea modificar:");
+                                    String id7 = scanner.nextLine();
+                                    for (Pelicula pelicula : peliculas) {
+                                        if (pelicula.getId().equals(id7)) {
+                                            System.out.println("Ingrese el nuevo stock:");
+                                            int newStock = Integer.parseInt(scanner.nextLine());
+                                            pelicula.setStock(newStock);
+                                        }
+                                    }
+                                    break;
+                            }
                             break;
+
                         case 3:
                             System.out.println("Eliminar pelicula.");
                             break;

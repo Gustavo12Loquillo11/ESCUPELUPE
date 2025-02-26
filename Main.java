@@ -67,10 +67,40 @@ public class Main {
                         }
                         break;
                     case 4:
-                        System.out.println("Prestamos de peliculas.");
+                        System.out.println("Ingrese el nombre de la película que desea pedir prestada:");
+                        String nombrePrestamo = scanner.nextLine();
+                        boolean encontradaPrestamo = false;
+                        for (Pelicula pelicula : peliculas) {
+                            if (pelicula.getTitulo().equalsIgnoreCase(nombrePrestamo)) {
+                                encontradaPrestamo = true;
+                                if (pelicula.getStock() > 0) {
+                                    pelicula.setStock(pelicula.getStock() - 1);
+                                    System.out.println("Préstamo exitoso de la película " + pelicula.getTitulo());
+                                } else {
+                                    System.out.println("Lo siento, no tenemos esa película en stock");
+                                }
+                                break;
+                            }
+                        }
+                        if (!encontradaPrestamo) {
+                            System.out.println("No tenemos una película con ese nombre");
+                        }
                         break;
                     case 5:
-                        System.out.println("Devolucion de peliculas.");
+                        System.out.println("Ingrese el nombre de la película que desea devolver:");
+                        String nombreDevolucion = scanner.nextLine();
+                        boolean encontradaDevolucion = false;
+                        for (Pelicula pelicula : peliculas) {
+                            if (pelicula.getTitulo().equalsIgnoreCase(nombreDevolucion)) {
+                                encontradaDevolucion = true;
+                                pelicula.setStock(pelicula.getStock() + 1);
+                                System.out.println("Devolución exitosa, la película " + pelicula.getTitulo() + " se ha devuelto");
+                                break;
+                            }
+                        }
+                        if (!encontradaDevolucion) {
+                            System.out.println("Esa película no se ha prestado");
+                        }
                         break;
                     case 6:
                         System.out.println("Cerrar programa.");

@@ -254,9 +254,12 @@ public class Main {
                             for (Pelicula pelicula : peliculas){
                                 if (pelicula.getId().equals(id)){
                                     peliculas.remove(pelicula);
-                                }
-                            }
-                            break;
+                                    System.out.println("Pelicula eliminada.");
+                                    break;
+                                    
+                                }                                                      
+                            }                            break;
+
                         case 4:
                             System.out.println("Hasta pronto "+usuario+".");
                             System.exit(0);

@@ -38,9 +38,29 @@ public class Main {
                         }
                         break;
                     case 2:
+                        for (Pelicula pelicula : peliculas) {
+                            if (!generos.contains(pelicula.getGenero())) {
+                                generos.add(pelicula.getGenero());
+                            }
+                        }
                         System.out.println("Mostrar peliculas por genero.");
+                        for (String genero : generos) {
+                            System.out.println("Género: "+genero);
+
+                            for (Pelicula pelicula : peliculas) {
+                                if (pelicula.getGenero().equals(genero)) {
+                                    System.out.println(pelicula.getTitulo());
+                                }
+                            }
+                            System.out.println("");
+                        }
+
                         break;
                     case 3:
+                    for (Pelicula pelicula : peliculas) {
+                        if (!generos.contains(pelicula.getGenero())) {
+                            generos.add(pelicula.getGenero());
+                        }}
                         System.out.println("Mostrar generos.");
                         for (String genero : generos) {
                             System.out.println(genero);

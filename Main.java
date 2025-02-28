@@ -199,7 +199,8 @@ public class Main {
                                 Pelicula pelicula = new Pelicula(id, titulo, autor, year, genero, duracion, stock);
                                 peliculas.add(pelicula);
                                 // Mostrar los detalles de la película
-                                System.out.println(peliculas);
+                                System.out.println("Pelicula: "+ pelicula.getTitulo()+" ID: "+pelicula.getId());
+                                
                             }
                             catch (IllegalArgumentException e) {
                                 System.out.println("Error: " + e.getMessage());
@@ -326,7 +327,9 @@ public class Main {
                             break;
 
                         case 3:
-                            System.out.println(peliculas);
+                            for (Pelicula pelicula : peliculas){
+                                System.out.println("Pelicula: "+pelicula.getTitulo()+" ID: "+pelicula.getId());
+                            }
                             System.out.println(AnsiColors.CYAN.TXT);
                             System.out.println("Ingrese el ID de la película que desea eliminar:");
                             System.out.println(AnsiColors.RESET);
